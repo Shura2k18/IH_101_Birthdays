@@ -1,0 +1,20 @@
+{
+  "name": "birthdays_bot",
+  "version": "1.0.0",
+  "description": "It's my f*cking bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "engines": {
+    "node": "14.18.0"
+  },
+  "author": "Shura2k22",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "node-telegram-bot-api": "^0.56.0",
+    "nodemon": "^2.0.15"
+  }
+}

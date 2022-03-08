@@ -1,0 +1,42 @@
+const members = [
+    {id: 0, name: "Машу Бабенко", add: 0, month: 11, day: 3},
+    {id: 1, name: "Артема Макаренка", add: 1, month: 11, day: 18},
+    {id: 2, name: "Таріела Чавлеішвілі", add: 1, month: 00, day: 20},
+    {id: 3, name: "Діму Уманського", add: 1, month: 02, day: 05},
+    {id: 4, name: "Свята Алексєєва", add: 1, month: 02, day: 16},
+    {id: 5, name: "Артема Регаровича", add: 1, month: 02, day: 18},
+    {id: 6, name: "Сашу Індика", add: 1, month: 02, day: 27},
+    {id: 7, name: "Льошу Задніпрянця", add: 1, month: 02, day: 29},
+    {id: 8, name: "Тоху Зугравого", add: 1, month: 02, day: 31},
+    {id: 9, name: "Макса Кучерука", add: 1, month: 03, day: 07},
+    {id: 10, name: "Вову Слободяна", add: 1, month: 03, day: 09},
+    {id: 11, name: "Лізу Костельнюк", add: 0, month: 03, day: 22},
+    {id: 12, name: "Настю Дасюк", add: 0, month: 03, day: 27},
+    {id: 13, name: "Поліну", add: 2, month: 04, day: 03},
+    {id: 14, name: "Дениса Саленка", add: 1, month: 04, day: 08},
+    {id: 15, name: "Василя Михайлика", add: 1, month: 04, day: 12},
+    {id: 16, name: "Таню Кащую", add: 0, month: 04, day: 13},
+    {id: 17, name: "Влада Мулика", add: 1, month: 04, day: 19},
+    {id: 18, name: "Нікіту Гусара", add: 1, month: 04, day: 22},
+    {id: 19, name: "Марка Тарабана", add: 1, month: 05, day: 08},
+    {id: 20, name: "Дениса Горбу", add: 1, month: 05, day: 10},
+    {id: 21, name: "Варю Ханкелдієву", add: 0, month: 05, day: 25},
+    {id: 22, name: "Мирослава Куць", add: 1, month: 06, day: 17},
+    {id: 23, name: "Сашу Лашкова", add: 1, month: 06, day: 25},
+    {id: 24, name: "Льошу", add: 2, month: 07, day: 20},
+    {id: 25, name: "Влада Усика", add: 1, month: 07, day: 24},
+    {id: 26, name: "Русіка", add: 2, month: 08, day: 02},
+    {id: 27, name: "Дениса Шевченка", add: 1, month: 08, day: 29},
+    {id: 28, name: "Олену Попову", add: 0, month: 10, day: 02},
+    {id: 29, name: "Артема Бондара", add: 1, month: 10, day: 17},
+    {id: 30, name: "Мішу Клименка", add: 1, month: 10, day: 21},
+    {id: 31, name: "Макса Омельченка", add: 1, month: 10, day: 23},
+    {id: 32, name: "Катю Юрьєву", add: 0, month: 10, day: 28},
+]
+const whom = [
+    "нашу любу одногрупницю",
+    "нашого любого одногрупника",
+    "нашого любого куратора"
+]
+module.exports.members = members
+module.exports.whom = whom
