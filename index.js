@@ -10,7 +10,7 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
     let year = new Date().getFullYear();
     const time = new Date().getTime();
     const timed = new Date(year, month, day, 22, 37).getTime();
-    let endDate = timed - time < 0 ? new Date(year+1, month, day, 08).getTime() : new Date(year, month, day, 02, 37, 10).getTime();
+    let endDate = timed - time < 0 ? new Date(year+1, month, day, 08).getTime() : new Date(year, month, day, 22, 37, 10).getTime();
     const timer = setInterval(function() {  
         let now = new Date().getTime();
         let t = endDate - now;
