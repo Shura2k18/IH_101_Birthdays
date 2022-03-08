@@ -7,10 +7,10 @@ const bot = new TelegramBot(process.env.TOKEN, {polling: true});
 
 const intervalfunc = (chatId, month, day, whom, name, add) => {
     let img = __dirname + '/birthday.jpg'
-    let year = 2022;
+    let year = new Date().getFullYear();
     const time = new Date().getTime();
     const timed = new Date(year, month, day).getTime();
-    let endDate = timed - time < 0 ? new Date(year+1, month, day, 08).getTime() : new Date(year, month, day, 00, 00).getTime();
+    let endDate = timed - time < 0 ? new Date(year+1, month, day, 08).getTime() : new Date(year, month, day, 08).getTime();
     const timer = setInterval(function() {  
         let now = new Date().getTime();
         let t = endDate - now;
@@ -22,7 +22,13 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
         }
     }, 1000);
 }
-bot.on('message', async (msg) => {
+bot.onText(/start(.+)/, (msg) => {
+    let chatId = msg.chat.id;
+    textmsg.members.forEach(member => {
+        intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
+    });
+});
+bot.on("message", (msg) => {
     let chatId = msg.chat.id;
     let text = msg.text;
     if(text === '/start') {
