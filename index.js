@@ -17,7 +17,7 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
     //bot.sendMessage(chatId, `${endDate}c`)
     const timer = setInterval(function() {  
         let now = new Date().getTime();
-        let t = endDate - now;
+        let t = now - endDate;
         bot.sendMessage(chatId, `${now}a`)
         bot.sendMessage(chatId, `${t}b`)
         return 0
