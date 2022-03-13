@@ -16,7 +16,7 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
         year += 1;
         endDate = new Date(year, month, day, 08, 00).getTime();   
     } else {
-        endDate = new Date(year, month, day, 19, 54).getTime();
+        endDate = new Date(year, month, day, 19, 57).getTime();
     }
     //let t = endDate - time;
     //bot.sendMessage(chatId, `${t}   a`)
@@ -25,9 +25,12 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
         let t = endDate - now;
         if (t <= 0) {
             bot.sendPhoto(chatId, img, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати, ${add === 0 ? whom[0] : add === 1 ? whom[1] : whom[2]}, ${name} з днем народження та побажати йому щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});
+            bot.sendMessage(chatId, 'aaa')
             year += 1;
             endDate = new Date(year, month, day, 08).getTime();
             return 0;
+        } else {
+            bot.sendMessage(chatId, 'bbb')
         }
     }, 1000);
 }
