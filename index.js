@@ -28,15 +28,15 @@ bot.onText(/start(.+)/, (msg) => {
     // textmsg.members.forEach(member => {
     //     intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
     // });
-    bot.sendMessage(chatId, "ddd")
+    bot.sendMessage(chatId, "aaa")
 });
 bot.on("message", (msg) => {
     let chatId = msg.chat.id;
     let text = msg.text;
-    // if(text === '/start') {
-    //     textmsg.members.forEach(member => {
-    //         intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
-    //     });
-    // }
-    bot.sendMessage(chatId, "ddd")
+    if(text === '/start') {
+        textmsg.members.forEach(member => {
+            intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
+        });
+        bot.sendMessage(chatId, "ddd")
+    }
 });
