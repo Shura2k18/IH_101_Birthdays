@@ -9,8 +9,8 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
     let img = __dirname + '/birthday.jpg'
     let year = new Date().getFullYear();
     const time = new Date().getTime();
-    const timed = new Date(year, month, day).getTime();
-    let endDate = timed - time < 0 ? new Date(year+1, month, day, 08).getTime() : new Date(year, month, day, 00, 00).getTime();
+    const timed = new Date(year, month, day, 12, 45).getTime();
+    let endDate = timed - time < 0 ? new Date(year+1, month, day, 08).getTime() : new Date(year, month, day, 12, 50).getTime();
     const timer = setInterval(function() {  
         let now = new Date().getTime();
         let t = endDate - now;
