@@ -1,6 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 const dotenv = require('dotenv');
 dotenv.config();
+process.env.NTBA_FIX_319 = 1
 const textmsg = require('./text');
 
 const bot = new TelegramBot(process.env.TOKEN, {polling: true});
@@ -24,16 +25,18 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
 }
 bot.onText(/start(.+)/, (msg) => {
     let chatId = msg.chat.id;
-    textmsg.members.forEach(member => {
-        intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
-    });
+    // textmsg.members.forEach(member => {
+    //     intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
+    // });
+    bot.sendMessage(chatId, "ddd")
 });
 bot.on("message", (msg) => {
     let chatId = msg.chat.id;
     let text = msg.text;
-    if(text === '/start') {
-        textmsg.members.forEach(member => {
-            intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
-        });
-    }
+    // if(text === '/start') {
+    //     textmsg.members.forEach(member => {
+    //         intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
+    //     });
+    // }
+    bot.sendMessage(chatId, "ddd")
 });
