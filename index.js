@@ -11,16 +11,15 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
     let year = new Date().getFullYear();
     const time = new Date().getTime();
     const timed = new Date(year, month, day, 16, 14).getTime();
-    let endDate = new Date(year, month, day, 16, 14, 05).getTime();
+    let endDate = new Date(year, month, day, 16, 14, 05).getTime();   
+    let t = time - endDate;
     //bot.sendMessage(chatId, `${time}a`)
     //bot.sendMessage(chatId, `${timed}b`)
     //bot.sendMessage(chatId, `${endDate}c`)
+    bot.sendMessage(chatId, `${t}a`)
     const timer = setInterval(function() {  
-        let now = new Date().getTime();
-        let t = now - endDate;
-        bot.sendMessage(chatId, `${now}a`)
-        bot.sendMessage(chatId, `${t}b`)
-        return 0
+        // let now = new Date().getTime();
+        // let t = now - endDate;
         // if (t < 0) {
         //     bot.sendPhoto(chatId, img, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати, ${add === 0 ? whom[0] : add === 1 ? whom[1] : whom[2]}, ${name} з днем народження та побажати йому щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});
         //     year += 1;
