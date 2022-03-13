@@ -1,7 +1,5 @@
+require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
-const dotenv = require('dotenv');
-dotenv.config();
-process.env.NTBA_FIX_319 = 1
 const textmsg = require('./text');
 let img = __dirname + '/birthday.jpg'
 
@@ -16,7 +14,7 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
         year += 1;
         endDate = new Date(year, month, day, 08, 00).getTime();   
     } else {
-        endDate = new Date(year, month, day, 21, 22).getTime();
+        endDate = new Date(year, month, day, 21, 35).getTime();
     }
     //let t = endDate - time;
     //bot.sendMessage(chatId, `${t}   a`)
@@ -32,13 +30,13 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
         }
     }, 1000);
 }
-bot.onText(/start(.+)/, (msg) => {
+bot.onText(/start(.+)/, function(msg) {
     let chatId = msg.chat.id;
     textmsg.members.forEach(member => {
         intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
     });
 });
-bot.on('message', (msg) => {
+bot.on('message', function(msg) {
     let chatId = msg.chat.id;
     let text = msg.text;
     if(text === '/start') {
