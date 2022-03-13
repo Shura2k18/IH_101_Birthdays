@@ -24,7 +24,7 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
     }, 1000);
 }
 //bot.onText(/start(.+)/, (msg) => {
-    let chatId = msg.chat.id;
+    //let chatId = msg.chat.id;
     // textmsg.members.forEach(member => {
     //     intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
     // });
