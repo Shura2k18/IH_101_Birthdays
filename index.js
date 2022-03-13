@@ -11,10 +11,10 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
     const timed = new Date(year, month, day, 22, 00).getTime();
     let endDate;
     if(timed < time) {
-        year += 1;
-        endDate = new Date(year, month, day, 08, 00).getTime();   
+        //year += 1;
+        endDate = new Date(year, month, day, 21, 44).getTime();   
     } else {
-        endDate = new Date(year, month, day, 21, 40).getTime();
+        endDate = new Date(year, month, day, 21, 44).getTime();
     }
     //let t = endDate - time;
     //bot.sendMessage(chatId, `${t}   a`)
