@@ -13,10 +13,7 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
     const timed = new Date(year, month, day, 16, 14).getTime();
     let endDate = new Date(year, month, day, 16, 14, 05).getTime();   
     let t = time - endDate;
-    //bot.sendMessage(chatId, `${time}a`)
-    //bot.sendMessage(chatId, `${timed}b`)
-    //bot.sendMessage(chatId, `${endDate}c`)
-    bot.sendMessage(chatId, `${t}a`)
+    bot.sendMessage(chatId, `${t}   a`)
     const timer = setInterval(function() {  
         // let now = new Date().getTime();
         // let t = now - endDate;
