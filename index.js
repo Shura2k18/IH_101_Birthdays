@@ -7,8 +7,6 @@ let img = __dirname + '/birthday.jpg'
 
 const bot = new TelegramBot(process.env.TOKEN, {polling: true});
 
-let year = new Date().getFullYear();
-
 const intervalfunc = (chatId, month, day, whom, name, add) => {
     let year = new Date().getFullYear();
     const time = new Date().getTime();
@@ -41,6 +39,7 @@ bot.on('message', (msg) => {
         //textmsg.members.forEach(member => {
             //intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
             //bot.sendPhoto(chatId, img, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати, ${member.add === 0 ? textmsg.whom[0] : member.add === 1 ? textmsg.whom[1] : textmsg.whom[2]}, ${member.name} з днем народження та побажати йому щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});           
+            let year = new Date().getFullYear();
             //const time = new Date().getTime();
             //const timed = new Date(year, member.month, member.day, 14, 53).getTime();
             let endDate = new Date(year, 02, 13, 15, 10, 05).getTime();
@@ -53,9 +52,9 @@ bot.on('message', (msg) => {
                     bot.sendMessage(chatId, 'ddd');
                     year += 1;
                     endDate = new Date(year, 02, 13, 08).getTime();
-                    bot.sendMessage(chatId, year);
-                    bot.sendMessage(chatId, endDate);
-                    bot.sendMessage(chatId, now);
+                    //bot.sendMessage(chatId, year);
+                    //bot.sendMessage(chatId, endDate);
+                    //bot.sendMessage(chatId, now);
                     bot.sendMessage(chatId, t);
                 //}
             }, 1000);
