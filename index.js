@@ -36,9 +36,10 @@ bot.on('message', (msg) => {
     let chatId = msg.chat.id;
     let text = msg.text;
     if(text === '/start') {
-        // textmsg.members.forEach(member => {
-        //     intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
-        // });
-        bot.sendPhoto(chatId, img, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати, з днем народження та побажати йому щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});
+        textmsg.members.forEach(member => {
+            //intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
+            bot.sendPhoto(chatId, img, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати, ${member.add === 0 ? textmsg.whom[0] : member.add === 1 ? textmsg.whom[1] : textmsg.whom[2]}, ${member.name} з днем народження та побажати йому щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});
+        });
+        //bot.sendPhoto(chatId, img, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати, з днем народження та побажати йому щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});
     }
 });
