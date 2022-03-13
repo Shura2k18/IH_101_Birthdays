@@ -10,7 +10,7 @@ const bot = new TelegramBot(process.env.TOKEN, {polling: true});
 const intervalfunc = (chatId, month, day, whom, name, add) => {
     let year = new Date().getFullYear();
     const time = new Date().getTime();
-    const timed = new Date(year, month, day).getTime();
+    const timed = new Date(year, month, day, 20, 00).getTime();
     let endDate;
     if(timed - time < 0) {
         year += 1;
