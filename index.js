@@ -42,8 +42,20 @@ bot.on('message', (msg) => {
             //intervalfunc(chatId, member.month, member.day, textmsg.whom, member.name, member.add);
             //bot.sendPhoto(chatId, img, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати, ${member.add === 0 ? textmsg.whom[0] : member.add === 1 ? textmsg.whom[1] : textmsg.whom[2]}, ${member.name} з днем народження та побажати йому щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});           
             const time = new Date().getTime();
-            const timed = new Date(year, member.month, member.day, 14, 50).getTime();
-            timed - time < 0 ? new Date(year+1, member.month, member.day, 08).getTime() : bot.sendMessage(chatId, 'ddd');;
+            const timed = new Date(year, member.month, member.day, 14, 53).getTime();
+            let endDate = timed - time < 0 ? new Date(year+1, member.month, member.day, 08).getTime() : new Date(year, member.month, member.day, 14, 53, 05).getTime();
+            setInterval(() => {  
+                let now = new Date().getTime();
+                let t = endDate - now;
+                if (t < 0) {
+                    //bot.sendPhoto(chatId, img, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати, ${add === 0 ? whom[0] : add === 1 ? whom[1] : whom[2]}, ${name} з днем народження та побажати йому щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});
+                    //bot.sendPhoto(chatId, img, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати, з днем народження та побажати йому щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});
+                    bot.sendMessage(chatId, 'ddd');
+                    year += 1;
+                    endDate = new Date(year, member.month, member.day, 08).getTime();
+                    return 0;
+                }
+            }, 1000);
         });
         //bot.sendPhoto(chatId, img, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати, з днем народження та побажати йому щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});
     }
