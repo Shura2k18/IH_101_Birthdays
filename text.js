@@ -4,7 +4,7 @@ const members = [
     {id: 2, name: "Таріела Чавлеішвілі", add: 1, month: 00, day: 20},
     {id: 3, name: "Діму Уманського", add: 1, month: 02, day: 05},
     {id: 4, name: "Свята Алексєєва", add: 1, month: 02, day: 16},
-    {id: 5, name: "Артема Регаровича", add: 1, month: 02, day: 18},
+    {id: 5, name: "Артема Ригаровича", add: 1, month: 02, day: 18},
     {id: 6, name: "Сашу Індика", add: 1, month: 02, day: 27},
     {id: 7, name: "Льошу Задніпрянця", add: 1, month: 02, day: 29},
     {id: 8, name: "Тоху Зугравого", add: 1, month: 02, day: 31},
