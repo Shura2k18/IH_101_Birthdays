@@ -32,8 +32,8 @@ const members = [
     {id: 30, name: "Мішу Клименка", add: 1, month: 10, day: 21},
     {id: 31, name: "Макса Омельченка", add: 1, month: 10, day: 23},
     {id: 32, name: "Катю Юрьєву", add: 0, month: 10, day: 28},
-    {id: 33, name: "Girl's day", month: 1, day: 14},
-    {id: 34, name: "New Year", month: 0, day: 1}
+    {id: 33, name: "Girl's day", month: 2, day: 8},
+    {id: 34, name: "New Year", month: 1, day: 14}
 ]
 const whom = [
     "нашу любу одногрупницю",

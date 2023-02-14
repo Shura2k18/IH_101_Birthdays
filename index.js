@@ -14,6 +14,7 @@ app.get('/', function(req, res) {
 })
 app.listen(port, () => { console.log() })
 
+mongoose.set("strictQuery", true);
 mongoose.connect(
     process.env.MONGO_URL,
     { useNewUrlParser: true, useUnifiedTopology: true },
@@ -32,22 +33,22 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
 
     let year = moment.tz("Europe/Kiev").year();
     const time = moment.tz("Europe/Kiev").valueOf();
-    const timed = moment.tz([year, month, day], "Europe/Kiev").valueOf();
+    const timed = moment.tz([year, month, day, 21, 25], "Europe/Kiev").valueOf();
     let endDate;
     if(timed < time) {
         year += 1;
-        endDate = moment.tz([year, month, day], "Europe/Kiev").valueOf();   
-    } else {
         endDate = moment.tz([year, month, day], "Europe/Kiev").valueOf();
+    } else {
+        endDate = moment.tz([year, month, day, 21, 25], "Europe/Kiev").valueOf();
     }
 
     const timer = setInterval(function() {  
         let now = moment.tz("Europe/Kiev").valueOf();
         if (now >= endDate) {
-            if (month === 1 && day === 14) {
+            if (month === 2 && day === 8) {
                 let image = __dirname + `/img/march.jpg`;
                 bot.sendPhoto(chatId, image, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі дівчата, вітаю зі святом жіночої краси і чарівності, весняного натхнення і світлої радості! У день 8 березня від щирого серця бажаю постійного відчуття щастя, щоденної радості в душі, чарівних почуттів любові і ніжності, хорошого настрою і впевненості в собі!\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf37 \ud83c\udf37 \ud83c\udf37`});
-            } else if (month === 0 && day === 1) {
+            } else if (month === 1 && day === 14) {
                 let image = __dirname + `/img/newyear.jpg`;
                 bot.sendPhoto(chatId, image, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати вас всіх з Новий роком та побажати щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});
             } else {
