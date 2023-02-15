@@ -8,7 +8,7 @@ const members = [
     {id: 6, name: "Сашу Індика", add: 1, month: 2, day: 27},
     {id: 7, name: "Льошу Задніпрянця", add: 1, month: 2, day: 29},
     {id: 8, name: "Тоху Зугравого", add: 1, month: 2, day: 31},
-    {id: 9, name: "Макса Кучерука", add: 1, month: 3, day: 7},
+    {id: 9, name: "Макса Кучерука", add: 1, month: 1, day: 15},
     {id: 10, name: "Вову Слободяна", add: 1, month: 3, day: 9},
     {id: 11, name: "Лізу Костельнюк", add: 0, month: 3, day: 22},
     {id: 12, name: "Настю Дасюк", add: 0, month: 3, day: 27},
@@ -33,7 +33,7 @@ const members = [
     {id: 31, name: "Макса Омельченка", add: 1, month: 10, day: 23},
     {id: 32, name: "Катю Юрьєву", add: 0, month: 10, day: 28},
     {id: 33, name: "Girl's day", month: 2, day: 8},
-    {id: 34, name: "New Year", month: 1, day: 14}
+    {id: 34, name: "New Year", month: 0, day: 1}
 ]
 const whom = [
     "нашу любу одногрупницю",
