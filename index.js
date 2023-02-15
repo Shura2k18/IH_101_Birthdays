@@ -33,13 +33,13 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
 
     let year = moment.tz("Europe/Kiev").year();
     const time = moment.tz("Europe/Kiev").valueOf();
-    const timed = moment.tz([year, month, day, 12, 12], "Europe/Kiev").valueOf();
+    const timed = moment.tz([year, month, day], "Europe/Kiev").valueOf();
     let endDate;
     if(timed < time) {
         year += 1;
         endDate = moment.tz([year, month, day], "Europe/Kiev").valueOf();
     } else {
-        endDate = moment.tz([year, month, day, 12, 12], "Europe/Kiev").valueOf();
+        endDate = moment.tz([year, month, day], "Europe/Kiev").valueOf();
     }
 
     const timer = setInterval(function() {  
@@ -52,7 +52,7 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
                 let image = __dirname + `/img/newyear.jpg`;
                 bot.sendPhoto(chatId, image, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати вас всіх з Новий роком та побажати щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});
             } else {
-                bot.sendPhoto(624965724, img, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати, ${add === 0 ? whom[0] : add === 1 ? whom[1] : whom[2]}, ${name} з днем народження та побажати щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});
+                bot.sendPhoto(chatId, img, {caption: `\u2764\ufe0f \u2764\ufe0f \u2764\ufe0f \nЛюбі друзі, у цей чудовий день хотілось би привітати, ${add === 0 ? whom[0] : add === 1 ? whom[1] : whom[2]}, ${name} з днем народження та побажати щастя, здоров'я, успіхів у житті й мирного неба над головою\ud83c\uddfa\ud83c\udde6))) \nЗі святом!!!!!!!\ud83c\udf89 \ud83c\udf89 \ud83c\udf89`});
             }
             year += 1;
             endDate = moment.tz([year, month, day], "Europe/Kiev").valueOf();
