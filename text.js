@@ -8,7 +8,7 @@ const members = [
     {id: 6, name: "Сашу Індика", add: 1, month: 2, day: 27},
     {id: 7, name: "Льошу Задніпрянця", add: 1, month: 2, day: 29},
     {id: 8, name: "Тоху Зугравого", add: 1, month: 2, day: 31},
-    {id: 9, name: "Макса Кучерука", add: 1, month: 1, day: 16},
+    {id: 9, name: "Макса Кучерука", add: 1, month: 3, day: 7},
     {id: 10, name: "Вову Слободяна", add: 1, month: 3, day: 9},
     {id: 11, name: "Лізу Костельнюк", add: 0, month: 3, day: 22},
     {id: 12, name: "Настю Дасюк", add: 0, month: 3, day: 27},
