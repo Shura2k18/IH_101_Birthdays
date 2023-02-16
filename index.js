@@ -33,13 +33,13 @@ const intervalfunc = (chatId, month, day, whom, name, add) => {
 
     let year = moment.tz("Europe/Kiev").year();
     const time = moment.tz("Europe/Kiev").valueOf();
-    const timed = moment.tz([year, month, day, 12, 30], "Europe/Kiev").valueOf();
+    const timed = moment.tz([year, month, day], "Europe/Kiev").valueOf();
     let endDate;
     if(timed < time) {
         year += 1;
         endDate = moment.tz([year, month, day], "Europe/Kiev").valueOf();
     } else {
-        endDate = moment.tz([year, month, day, 12, 30], "Europe/Kiev").valueOf();
+        endDate = moment.tz([year, month, day], "Europe/Kiev").valueOf();
     }
 
     const timer = setInterval(function() {  
